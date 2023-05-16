@@ -1,0 +1,162 @@
+@use "sass:math";
+
+/*--------------------------------------------
+ Var
+---------------------------------------------*/
+
+// google - webfont
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Shippori+Mincho&display=swap");
+
+$reg: 400;
+$bol: 700;
+
+$font-jp: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+
+$font-en: "Montserrat", sans-serif;
+
+// Media
+$pc: 1024px;
+$tb: 768px;
+$sp: 375px;
+
+// 768 ~
+@mixin screen-tb {
+  @media screen and (min-width: $tb) {
+    @content;
+  }
+}
+
+// 1024 ~
+@mixin screen-pc {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
+// Easing ▼ クラベリア
+$menu-cover-easing: cubic-bezier(0.215, 0.61, 0.355, 1);
+$gnav-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Path
+$path-images: "../img/" !default;
+
+// Color
+$blck: #000;
+$wte: #fff;
+$bg: #eeece7;
+$key: #d6715b;
+
+/*--------------------------------------------
+ Mixin
+---------------------------------------------*/
+
+// text , font
+@mixin l_height($pixels, $height) {
+  line-height: math.div($height, $pixels);
+}
+
+@mixin l_spacing($spacing) {
+  letter-spacing: math.div($spacing, 1000) + em;
+}
+
+//font-size
+@mixin font-size($fs: null, $lh: null) {
+  @if $fs {
+    font-size: $fs * 0.1 + rem;
+    @if $lh {
+      line-height: math.div($lh, $fs);
+    }
+  } @else {
+    @if $lh {
+      line-height: math.div($lh, 14);
+    }
+  }
+}
+
+// layout
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  position: fixed;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
+
+@mixin center($direction) {
+  position: absolute;
+  @if $direction==xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $direction==x {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $direction==y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// image
+@mixin background-image($fileName) {
+  background-image: url($path-images + $fileName);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  @content;
+}
+
+@mixin img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*--------------------------------------------
+ Keyframe
+---------------------------------------------*/
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------
+ function
+---------------------------------------------*/
+@function clampVw($min, $size, $max, $vp: 1920) {
+  $min: $min * 0.1rem;
+  $max: $max * 0.1rem;
+  $num: math.div(100, $vp) * 1vw;
+  $size_vw: $num * $size;
+  @return clamp($min, $size_vw, $max);
+}

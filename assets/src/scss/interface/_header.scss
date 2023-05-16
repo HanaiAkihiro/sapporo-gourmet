@@ -1,0 +1,109 @@
+@use "../setting/setting" as *;
+
+.header {
+  @include absolute($top: 0, $left: 0);
+  &__inner {
+    width: 100%;
+    max-width: calc(168rem + 4rem);
+    padding: 0 2rem;
+  }
+  &__flex {
+    justify-content: space-between;
+    align-items: center;
+    @include screen-pc {
+      height: 11.6rem;
+    }
+  }
+  &__flex1 {
+  }
+  &__flex1-flex {
+    align-items: center;
+    @include screen-pc {
+      column-gap: 2.4rem;
+    }
+  }
+  &__flex1-flex-logo {
+    @include screen-pc {
+      width: 6.5rem;
+      height: 7.5rem;
+    }
+    svg {
+      @include img;
+    }
+  }
+  &__flex1-flex-texts {
+  }
+  &__flex1-flex-texts-ttl {
+    @include font-size(10, 10);
+    margin-bottom: 0.8rem;
+  }
+  &__flex1-flex-texts-name {
+    @include screen-pc {
+      @include font-size(24, 24);
+    }
+  }
+  &__flex2 {
+    border: 1px solid $key;
+    background-color: $wte;
+    position: relative;
+    border-radius: 50%;
+    @include screen-pc {
+      width: 7.7rem;
+      height: 7.7rem;
+    }
+    &:before,
+    &:after {
+      @include center(xy);
+      content: "";
+      display: block;
+      background-color: $key;
+      border-radius: 9999px;
+
+      @include screen-pc {
+        width: 3.2rem;
+        height: 0.3rem;
+      }
+    }
+  }
+}
+
+// .nav-btn {
+//   width: 6rem;
+//   height: 6rem;
+//   background-color: #000;
+//   margin-left: auto;
+//   position: relative;
+//   cursor: pointer;
+//   z-index: 1000;
+//   &_bar {
+//     @include absolute($top: 0, $left: 0, $right: 0, $bottom: 0);
+//     display: block;
+//     width: 2.4rem;
+//     height: 0.2rem;
+//     margin: auto;
+//     background: #fff;
+//     transition: opacity 0.5s $gnav-easing, transform 0.5s $gnav-easing;
+//     will-change: opacity transform;
+
+//     &:nth-child(1) {
+//       transform: translateY(-0.6rem);
+//       .menu-active & {
+//         transform: rotate(45deg);
+//       }
+//     }
+
+//     &:nth-child(2) {
+//       .menu-active & {
+//         opacity: 0;
+//       }
+//     }
+
+//     &:nth-child(3) {
+//       transform: translateY(0.6rem);
+
+//       .menu-active & {
+//         transform: rotate(-45deg);
+//       }
+//     }
+//   }
+// }

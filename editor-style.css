@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+html,
+body {
+  height: auto;
+}
+html {
+  /* 10pxを基準サイズにする */
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+
+em{
+  font-style: italic;
+}
+
+strong{
+  font-weight: bold;
+}

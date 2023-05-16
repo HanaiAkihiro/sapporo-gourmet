@@ -1,0 +1,211 @@
+@use "../setting/setting" as *;
+
+.search {
+  height: auto;
+  &__inner {
+    width: 100%;
+    max-width: 192rem;
+  }
+  form {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    background-color: $wte;
+    @include screen-pc {
+      padding: 15.2rem 2rem;
+      border-radius: 0 0 0 9.6rem;
+    }
+  }
+}
+
+.search-key,
+.search-area {
+  margin: 0 auto;
+  @include screen-pc {
+    max-width: calc(134rem + 4rem);
+  }
+  &__flex {
+    flex-direction: column;
+    @include screen-pc {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  // flex1
+  &__flex1 {
+    @include screen-pc {
+      width: 28%;
+    }
+  }
+  &__flex1-ttl {
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include screen-pc {
+      @include font-size(32, 44.8);
+      padding-top: 4.8rem;
+    }
+    &:before {
+      @include absolute($top: 0, $left: 0);
+      content: "";
+      display: block;
+      background-color: $key;
+      border-radius: 9999px;
+      @include screen-pc {
+        width: 4.8rem;
+        height: 0.4rem;
+      }
+    }
+  }
+  // flex2
+  &__flex2 {
+    @include screen-pc {
+      width: 72%;
+    }
+  }
+}
+
+.search-key {
+  border-bottom: 1px solid $bg;
+  @include screen-pc {
+    margin-bottom: 8rem;
+    padding-bottom: 8rem;
+  }
+  &__flex2-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    @include screen-pc {
+      row-gap: 1.2rem;
+      column-gap: 1.2rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__flex2-item {
+    label {
+      display: block;
+      position: relative;
+    }
+    input {
+      // Reset
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      background: none transparent;
+      vertical-align: middle;
+      font-size: inherit;
+      color: inherit;
+      box-sizing: content-box;
+      outline: none;
+      // ~ Reset
+
+      @include absolute($top: 0, $left: 0);
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 1px solid $blck;
+      border-radius: 9999px;
+
+      &:checked {
+        background-color: rgba($color: $key, $alpha: 0.5);
+      }
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      @include screen-pc {
+        @include font-size(16, 16);
+        padding: 1.2rem 3.2rem 0.8rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &__flex2-allert {
+    @include screen-pc {
+      @include font-size(12, 16.8);
+    }
+  }
+}
+
+.search-area {
+  &__flex2-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    @include screen-pc {
+      row-gap: 1.2rem;
+      column-gap: 1.2rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__flex2-item {
+    @include screen-pc {
+      width: calc(33.3% - (2.4rem / 3));
+      height: calc(11.2rem + 2rem);
+    }
+    label {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+
+      &:after {
+        @include absolute($top: 0, $left: 0);
+        content: "";
+        display: block;
+        background-color: $blck;
+        border-radius: 50%;
+        @include screen-pc {
+          @include absolute($top: 1rem, $left: 1rem);
+          width: 11.2rem;
+          height: 11.2rem;
+        }
+      }
+    }
+    input {
+      // Reset
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      background: none transparent;
+      vertical-align: middle;
+      font-size: inherit;
+      color: inherit;
+      box-sizing: content-box;
+      outline: none;
+      // ~ Reset
+
+      @include absolute($top: 0, $left: 0);
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 9999px;
+      cursor: pointer;
+      &:checked {
+        background-color: rgba($color: $key, $alpha: 0.5);
+      }
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      @include screen-pc {
+        @include absolute($top: 50%, $left: calc(11.2rem + 2rem));
+        @include font-size(16, 16);
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__flex2-allert {
+    @include screen-pc {
+      @include font-size(12, 16.8);
+    }
+  }
+}

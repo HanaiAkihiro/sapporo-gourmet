@@ -1,0 +1,18 @@
+@use "../setting/setting" as *;
+
+.off-canvas {
+  @include fixed($top: 0, $left: 0);
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s $menu-cover-easing,
+    visibility 0.5s $menu-cover-easing;
+  will-change: visibility, opacity;
+
+  .menu-active & {
+    opacity: 1;
+    visibility: visible;
+  }
+}

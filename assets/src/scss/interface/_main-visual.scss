@@ -1,0 +1,178 @@
+@use "../setting/setting" as *;
+
+.main-visual {
+  &__inner {
+    @include screen-pc {
+      max-width: 192rem;
+    }
+  }
+  &__flex {
+    justify-content: space-between;
+  }
+  // flex1
+  &__flex1 {
+    width: 61%;
+    position: relative;
+    @include screen-pc {
+      height: 108.4rem;
+      margin-top: 11.6rem;
+    }
+  }
+  &__flex1-slider {
+    @include absolute($top: 0, $left: 0);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: red;
+    @include screen-pc {
+      border-radius: 0 9.6rem 0 0;
+    }
+  }
+  &__flex1-slider-alpha {
+    @include absolute($top: 50%, $left: 0);
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    @include screen-pc {
+      @include absolute($top: 50%, $left: 12rem);
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+      letter-spacing: -0.075em;
+      @include screen-pc {
+        @include font-size(100, 100);
+      }
+
+      &:after {
+        @include absolute($bottom: 1rem, $left: 0);
+        width: 100%;
+        content: "";
+        display: block;
+        background-color: $wte;
+        @include screen-pc {
+          height: 1rem;
+        }
+      }
+    }
+  }
+  &__flex1-slider-flex {
+    width: auto;
+    align-items: center;
+    @include screen-pc {
+      @include absolute($bottom: 7.2rem, $left: 12rem);
+      column-gap: 3.2rem;
+    }
+  }
+  &__flex1-slider-flex-cat {
+    border: 1px solid $wte;
+    border-radius: 9999px;
+    @include screen-pc {
+      @include font-size(16, 16);
+      padding: 1.2rem 3.2rem;
+    }
+  }
+  &__flex1-slider-flex-title {
+    @include screen-pc {
+      @include font-size(18, 18);
+    }
+  }
+  // flex2
+  &__flex2 {
+    width: 34%;
+    position: relative;
+    @include screen-pc {
+      height: 120rem;
+    }
+  }
+  &__flex2-slider {
+    width: 100%;
+    background-color: red;
+    @include screen-pc {
+      height: 36.4rem;
+      border-radius: 0 0 0 9.6rem;
+      margin-bottom: 8rem;
+    }
+  }
+  &__flex2-wrap {
+    width: 100%;
+    height: auto;
+  }
+  &__flex2-nav {
+    background-color: $wte;
+    @include screen-pc {
+      width: 100%;
+      height: 67.6rem;
+      border-radius: 9.6rem 0 0 9.6rem;
+      padding: 2rem 1.6rem 2rem 0;
+      margin-bottom: 1rem;
+    }
+  }
+  &__flex2-wrap-allert {
+    color: rgba($color: #000000, $alpha: 1);
+    text-align: right;
+    @include screen-pc {
+      @include font-size(12, 12);
+      padding-right: 8rem;
+    }
+    a {
+      color: $key;
+      text-decoration: underline;
+    }
+  }
+  &__flex2-nav-list {
+    list-style: none;
+    margin: 0;
+    @include screen-pc {
+      height: 100%;
+      padding: 0 1.6rem 0 6.4rem;
+    }
+  }
+  &__flex2-nav-item {
+    border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.25);
+  }
+  &__flex2-nav-link {
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    @include screen-pc {
+      height: 12rem;
+      align-items: center;
+      column-gap: 1.6rem;
+      padding-right: 3.2rem;
+    }
+    &:after {
+      @include screen-pc {
+        @include font-size(24, 24);
+        @include absolute($top: 50%, $right: 0);
+        transform: translateY(-50%);
+        content: "→";
+        font-family: $font-en;
+        font-weight: $bol;
+        color: $key;
+      }
+    }
+  }
+  &__flex2-nav-link-num {
+    @include screen-pc {
+      @include font-size(16, 16);
+    }
+  }
+  &__flex2-nav-link-texts {
+  }
+  &__flex2-nav-link-title {
+    @include screen-pc {
+      @include font-size(24, 24);
+      color: $blck;
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__flex2-nav-link-desc {
+    @include screen-pc {
+      @include font-size(16, 16);
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+}

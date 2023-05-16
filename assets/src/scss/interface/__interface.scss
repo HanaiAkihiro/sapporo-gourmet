@@ -1,0 +1,110 @@
+@use "../setting/setting" as *;
+
+/*--------------------------------------------
+ Base
+---------------------------------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: calc(100 / 375 * 10vw);
+  @include screen-tb {
+    font-size: calc(100 / 768 * 10vw);
+  }
+
+  @include screen-pc {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  @include l_spacing(100);
+  font-size: 1.6rem;
+  font-family: $font-jp;
+  font-weight: $reg;
+  line-height: 1.4;
+  color: $blck;
+  background-color: $bg;
+  // iPhone の Safari で文字サイズが勝手に大きくなる時の対処
+  -webkit-text-size-adjust: 100%;
+  /* 文字をシャープに */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* カーニングとリガチャ（合字）を調整 */
+  text-rendering: optimizeLegibility;
+  // 自動カーニング
+  font-feature-settings: "palt" 1;
+
+  @include screen-tb {
+    /* 16px */
+    font-size: 1.6rem;
+  }
+}
+
+.page {
+  width: 100%;
+  height: auto;
+  position: relative;
+  // Layout
+  &__header,
+  &__main,
+  &__section,
+  &__article,
+  &__aside,
+  &__footer,
+  &__inner,
+  &__flex {
+    @extend .page;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  &__flex {
+    display: flex;
+  }
+  &__sp {
+    @include screen-tb {
+      display: none;
+    }
+  }
+  &__tb {
+    display: none;
+    @include screen-tb {
+      display: block;
+    }
+  }
+  &__pc {
+    display: none;
+    @include screen-pc {
+      display: block;
+    }
+  }
+  &__bold {
+    font-weight: $bol;
+  }
+  // site
+  &__en {
+    font-family: $font-en;
+  }
+  // color
+  &__wte {
+    color: $wte;
+  }
+  &__key {
+    color: $key;
+  }
+}
+
+// z-index
+.header {
+  z-index: 1;
+}
