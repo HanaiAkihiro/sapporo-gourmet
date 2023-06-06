@@ -42,7 +42,7 @@ $gnav-easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 $path-images: "../img/" !default;
 
 // Color
-$blck: #000;
+$black: #000;
 $wte: #fff;
 $bg: #eeece7;
 $key: #d6715b;
@@ -141,12 +141,12 @@ $key: #d6715b;
  Keyframe
 ---------------------------------------------*/
 
-@keyframes loading {
+@keyframes progress {
   0% {
-    transform: rotate(0deg);
+    width: 0;
   }
   100% {
-    transform: rotate(360deg);
+    width: 100%;
   }
 }
 

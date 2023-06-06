@@ -23,9 +23,23 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: red;
+    overflow: hidden;
     @include screen-pc {
       border-radius: 0 9.6rem 0 0;
+    }
+  }
+  &__flex1-slider-wrapper,
+  &__flex1-slider-track,
+  &__flex1-slider-list,
+  &__flex1-slider-slide {
+    width: 100%;
+    height: 100%;
+  }
+  &__flex1-slider-slide {
+    img {
+      @include img;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &__flex1-slider-alpha {
@@ -79,6 +93,60 @@
       @include font-size(18, 18);
     }
   }
+  // bar
+  &__flex1-slider-pagination {
+    @include absolute($top: 7.23rem, $left: 3.2rem);
+    width: calc(100% - 6.4rem);
+    height: auto;
+    z-index: 1;
+    @include screen-pc {
+      @include absolute($top: 7.23rem, $left: 3.2rem);
+      width: calc(100% - 6.4rem);
+      padding-top: 3.2rem;
+    }
+  }
+  &__flex1-slider-pagination-progress {
+    @include absolute($top: 0, $left: 0);
+    width: 100%;
+    height: 2px;
+    background-color: $wte;
+    .splide__pagination {
+      li {
+        button {
+          // Reset
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          border-radius: 0;
+          border: 0;
+          margin: 0;
+          padding: 0;
+          background: none transparent;
+          vertical-align: middle;
+          font-size: inherit;
+          color: inherit;
+          box-sizing: content-box;
+          outline: none;
+          // ~ Reset
+          @include absolute($top: 0, $left: 0);
+          width: 0;
+          height: 2px;
+          background-color: $key;
+
+          &.is-active {
+            animation: progress 6s;
+            background-color: $key;
+          }
+        }
+      }
+    }
+  }
+  &__flex1-slider-pagination-flex {
+    justify-content: flex-end;
+  }
+  &__flex1-slider-pagination-num-flex,
+  .splide__arrows {
+    width: auto;
+  }
   // flex2
   &__flex2 {
     width: 34%;
@@ -102,14 +170,45 @@
   }
   &__flex2-nav {
     background-color: $wte;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE, Edge 対応 */
+    scrollbar-width: none; /* Firefox 対応 */
+
     @include screen-pc {
       width: 100%;
       height: 67.6rem;
       border-radius: 9.6rem 0 0 9.6rem;
-      padding: 2rem 1.6rem 2rem 0;
+      padding: 4rem 0;
       margin-bottom: 1rem;
     }
+
+    &::-webkit-scrollbar {
+      /* Chrome, Safari 対応 */
+      display: none;
+      -webkit-appearance: none;
+    }
+
+    // カスタマイズ
+    .simplebar-scrollbar.simplebar-visible::before {
+      opacity: 1;
+    }
+
+    .simplebar-scrollbar::before {
+      /*-- スクロールバー自体の色を変更 --*/
+      background-color: $key;
+    }
+
+    .simplebar-track {
+      border-radius: 9999px;
+
+      &.simplebar-vertical {
+        @include absolute($top: 2rem, $right: 2rem);
+        background-color: rgba($color: #000000, $alpha: 0.05);
+        height: calc(100% - 4rem);
+      }
+    }
   }
+
   &__flex2-wrap-allert {
     color: rgba($color: #000000, $alpha: 1);
     text-align: right;
@@ -125,13 +224,16 @@
   &__flex2-nav-list {
     list-style: none;
     margin: 0;
+
     @include screen-pc {
       height: 100%;
-      padding: 0 1.6rem 0 6.4rem;
+      padding: 0 5.6rem 0 6.4rem;
     }
   }
   &__flex2-nav-item {
-    border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.25);
+    &:not(:last-child) {
+      border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.25);
+    }
   }
   &__flex2-nav-link {
     width: 100%;
@@ -165,7 +267,7 @@
   &__flex2-nav-link-title {
     @include screen-pc {
       @include font-size(24, 24);
-      color: $blck;
+      color: $black;
       margin-bottom: 1.6rem;
     }
   }

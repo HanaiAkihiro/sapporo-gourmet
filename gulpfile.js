@@ -58,8 +58,7 @@ const buildServer = (done) => {
     // server: { baseDir: "./" },
     // 動的サイト
     files: ["./**/*.php"],
-    // proxy: "http://localhost:8000/",
-    proxy: "http://localhost/wp-sapporo/",
+    proxy: "http://localhost:8000/",
     open: true,
     watchOptions: {
       debounceDelay: 1000,

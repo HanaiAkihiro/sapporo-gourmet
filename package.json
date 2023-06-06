@@ -43,6 +43,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@splidejs/splide": "^4.1.4",
-    "photoswipe": "^5.3.7"
+    "photoswipe": "^5.3.7",
+    "simplebar": "^6.2.5"
   }
 }

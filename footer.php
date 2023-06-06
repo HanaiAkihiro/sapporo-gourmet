@@ -11,7 +11,7 @@
 ?>
 
 </div>
-<script src='<?php echo get_template_directory_uri(); ?>/assets/dist/js/bundle.js?<?php print date('Ymd', filemtime(get_template_directory() . "/assets/dist/js/bundle.js")); ?>'></script>
+<script src='<?php echo get_template_directory_uri(); ?>/assets/dist/js/main.js?<?php print date('Ymd', filemtime(get_template_directory() . "/assets/dist/js/main.js")); ?>'></script>
 <?php wp_footer(); ?>
 </body>
 

@@ -4,7 +4,8 @@
   height: auto;
   &__inner {
     width: 100%;
-    max-width: 192rem;
+    max-width: calc(192rem - 12rem);
+    margin: 0 0 0 auto;
   }
   form {
     display: block;
@@ -107,7 +108,7 @@
       width: 100%;
       height: 100%;
       display: block;
-      border: 1px solid $blck;
+      border: 1px solid $black;
       border-radius: 9999px;
 
       &:checked {
@@ -158,7 +159,7 @@
         @include absolute($top: 0, $left: 0);
         content: "";
         display: block;
-        background-color: $blck;
+        background-color: $black;
         border-radius: 50%;
         @include screen-pc {
           @include absolute($top: 1rem, $left: 1rem);

@@ -29,7 +29,7 @@ body {
   font-family: $font-jp;
   font-weight: $reg;
   line-height: 1.4;
-  color: $blck;
+  color: $black;
   background-color: $bg;
   // iPhone の Safari で文字サイズが勝手に大きくなる時の対処
   -webkit-text-size-adjust: 100%;
@@ -99,12 +99,24 @@ body {
   &__wte {
     color: $wte;
   }
+  &__black {
+    color: $black;
+  }
   &__key {
     color: $key;
   }
 }
 
 // z-index
+
+.off-canvas {
+  z-index: 100;
+}
+
 .header {
+  z-index: 10;
+}
+
+.main-visual__flex1-slider-pagination {
   z-index: 1;
 }
