@@ -17,12 +17,69 @@
                 <div class="main-visual__flex1-slider-list splide__list">
                   <div class="main-visual__flex1-slider-slide splide__slide --1">
                     <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        ラーメン
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        ラーメンのタイトルです。
+                      </p>
+                    </div>
                   </div>
                   <div class="main-visual__flex1-slider-slide splide__slide --2">
                     <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        スイーツ
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        スイーツのタイトルです。
+                      </p>
+                    </div>
                   </div>
                   <div class="main-visual__flex1-slider-slide splide__slide --3">
                     <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        寿司
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        寿司のタイトルです。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main-visual__flex1-slider-slide splide__slide --1">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        ラーメン
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        ラーメンのタイトルです。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main-visual__flex1-slider-slide splide__slide --2">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        スイーツ
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        スイーツのタイトルです。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main-visual__flex1-slider-slide splide__slide --3">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                    <div class="main-visual__flex1-slider-flex page__flex">
+                      <p class="main-visual__flex1-slider-flex-cat page__wte">
+                        寿司
+                      </p>
+                      <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
+                        寿司のタイトルです。
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div class="main-visual__flex1-slider-pagination">
@@ -30,15 +87,12 @@
                     <ul class="splide__pagination"></ul>
                   </div>
                   <div class="main-visual__flex1-slider-pagination-flex page__flex">
-                    <div class="main-visual__flex1-slider-pagination-num-flex page__flex">
-                      <span id="js-current-slide"></span>
-                      <span id="js-slide-length"></span>
-                    </div>
+                    <div class="main-visual__flex1-slider-pagination-num-flex page__flex"><span id="js-current-slide" class="page__en page__wte"></span><span id="js-slide-length" class="page__en page__wte"></span></div>
                     <div class="splide__arrows page__flex">
-                      <p class="splide__arrow splide__arrow--prev">
+                      <p class="splide__arrow splide__arrow--prev page__wte">
                         ←
                       </p>
-                      <p class="splide__arrow splide__arrow--next">
+                      <p class="splide__arrow splide__arrow--next page__wte">
                         →
                       </p>
                     </div>
@@ -51,18 +105,35 @@
               <span class="page__bold page__wte page__en">Gourmet</span>
               <span class="page__bold page__wte page__en">Immigration</span>
             </p>
-            <div class="main-visual__flex1-slider-flex page__flex">
-              <p class="main-visual__flex1-slider-flex-cat page__wte">
-                カテゴリー
-              </p>
-              <p class="main-visual__flex1-slider-flex-title page__bold page__wte">
-                オンライン＆オフラインで、とっておきの上野を満喫！
-              </p>
-            </div>
+
           </div>
         </div>
         <div class="main-visual__flex2">
-          <div class="main-visual__flex2-slider" id="js-slider2">
+          <div class="main-visual__flex2-slider splide" id="js-slider2">
+            <div class="main-visual__flex2-slider-wrapper splide-wrapper">
+              <div class="main-visual__flex2-slider-track splide__track">
+                <div class="main-visual__flex2-slider-list splide__list">
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                  <div class="main-visual__flex2-slider-slide splide__slide">
+                    <img src="https://placehold.jp/1174x1084.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="main-visual__flex2-wrap">
             <nav id="js-scroll-bar" class="main-visual__flex2-nav" data-simplebar data-simplebar-auto-hide="false">

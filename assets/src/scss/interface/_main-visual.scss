@@ -36,10 +36,20 @@
     height: 100%;
   }
   &__flex1-slider-slide {
+    overflow: hidden;
+
+    &.is-active {
+      img {
+        transform: scale(1);
+      }
+    }
+
     img {
       @include img;
       height: 100%;
       object-fit: cover;
+      transform: scale(1.1);
+      transition: transform 1.5s ease-out;
     }
   }
   &__flex1-slider-alpha {
@@ -142,10 +152,52 @@
   }
   &__flex1-slider-pagination-flex {
     justify-content: flex-end;
+    align-items: center;
   }
   &__flex1-slider-pagination-num-flex,
   .splide__arrows {
     width: auto;
+  }
+  &__flex1-slider-pagination-num-flex {
+    column-gap: 3rem;
+    margin-right: 6.4rem;
+    position: relative;
+    span {
+      position: relative;
+      @include screen-pc {
+        @include font-size(24, 24);
+        display: block;
+      }
+      &:nth-of-type(2) {
+        &:after {
+          @include absolute($top: 50%, $left: -2.4rem);
+          transform: translateY(-50%);
+          width: 1.6rem;
+          height: 1px;
+          background-color: $wte;
+          display: block;
+          content: "";
+        }
+      }
+    }
+    &:after {
+      @include absolute($top: 50%, $right: -3.2rem);
+      transform: translateY(-50%);
+      content: "｜";
+      color: $wte;
+      display: block;
+    }
+  }
+  .splide__arrows {
+    @include screen-pc {
+      column-gap: 2.4rem;
+    }
+    p {
+      @include screen-pc {
+        @include font-size(32, 32);
+        cursor: pointer;
+      }
+    }
   }
   // flex2
   &__flex2 {
@@ -157,11 +209,35 @@
   }
   &__flex2-slider {
     width: 100%;
-    background-color: red;
+    overflow: hidden;
     @include screen-pc {
       height: 36.4rem;
       border-radius: 0 0 0 9.6rem;
       margin-bottom: 8rem;
+    }
+  }
+  &__flex2-slider-wrapper,
+  &__flex2-slider-track,
+  &__flex2-slider-list,
+  &__flex2-slider-slide {
+    width: 100%;
+    height: 100%;
+  }
+  &__flex2-slider-slide {
+    overflow: hidden;
+
+    &.is-active {
+      img {
+        transform: scale(1);
+      }
+    }
+
+    img {
+      @include img;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: transform 1.5s ease-out;
     }
   }
   &__flex2-wrap {

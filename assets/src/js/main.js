@@ -11,18 +11,31 @@ document.addEventListener(
     new ScrollBar("#js-scroll-bar");
 
     const splide = new Splide("#js-slider1", {
-      type: "fade", //スライド切り替え時fadeのアニメーション付与
-      autoplay: true, //自動再生
-      pauseOnHover: false, //スライドにhover時自動再生停止禁止
-      pauseOnFocus: false, //スライドfocus時自動再生停止禁止
-      rewind: true, //スライドの最後のページに行ったら、最初のページに戻れるようにする
-      interval: 6000, //次のスライドに行くまでの速さ
-      arrows: true, //デフォルトのページ送りボタンを非表示
-      speed: 2000, //ページ送りアニメーションの速さ
-      pagination: true, //デフォルトのページネーションを非表示
+      type: "loop",
+      autoplay: true,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      rewind: true,
+      interval: 6000,
+      arrows: true,
+      speed: 1500,
+      pagination: true,
+      updateOnMove: true,
     }).mount();
 
-    //アクティブスライドが変わった時に発生(次のスライドが表示されるタイミング)
+    const splide2 = new Splide("#js-slider2", {
+      type: "loop",
+      autoplay: true,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      rewind: true,
+      interval: 6000,
+      arrows: false,
+      speed: 1500,
+      pagination: false,
+      updateOnMove: true,
+    }).mount();
+
     splide.on("active", function () {
       slideIndex();
     });
@@ -37,6 +50,8 @@ document.addEventListener(
     }
 
     slideIndex(); //ハンドラのイベント実行前にも関数呼び出ししないと1枚目のスライドで番号が表示されない
+
+    splide2.sync(splide);
   },
   false
 );
