@@ -59,7 +59,9 @@ body {
   &__aside,
   &__footer,
   &__inner,
-  &__flex {
+  &__flex,
+  &__search,
+  &__latest {
     @extend .page;
   }
   &__inner {

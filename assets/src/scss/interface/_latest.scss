@@ -1,0 +1,121 @@
+@use "../setting/setting" as *;
+
+.latest {
+  background-color: $wte;
+  overflow: hidden;
+  &__inner {
+    width: 100%;
+    max-width: 192rem;
+    margin: 0 auto;
+  }
+  &__cnt {
+    max-width: calc(100% - 12rem);
+    margin-right: auto;
+    background-color: $bg;
+    @include screen-pc {
+      border-radius: 0 9.6rem 9.6rem 0;
+      padding: 15.2rem 0rem;
+    }
+  }
+  &__flex {
+    width: 100%;
+    max-width: 147rem;
+    justify-content: space-between;
+    @include screen-pc {
+      margin: 0 4rem 7.2rem auto;
+    }
+  }
+  &__flex1,
+  &__flex2 {
+    width: auto;
+  }
+  &__flex1Text {
+    @include screen-pc {
+      @include font-size(18, 36);
+    }
+  }
+  &__flex2 {
+    column-gap: 2.4rem;
+  }
+  &__flex2Btn {
+    border-radius: 9999px;
+    background-color: $key;
+    color: $wte;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    @include screen-pc {
+      @include font-size(24, 24);
+      padding: 2.4rem 3.2rem;
+      cursor: pointer;
+    }
+  }
+  &__flex2Btns {
+    column-gap: 1.6rem;
+  }
+  &__flex2Prev,
+  &__flex2Next {
+    @include font-size(24, 24);
+    width: 7.2rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $key;
+    background-color: $wte;
+    @include screen-pc {
+      cursor: pointer;
+    }
+  }
+  // slider
+  &__slider {
+  }
+  &__slider-wrapper {
+    width: 100%;
+    // 線が揃うように調整済
+    max-width: calc(147rem + 4.3rem);
+    @include screen-pc {
+      margin: 0 4rem 0 auto;
+    }
+  }
+  &__slider-track {
+    overflow: visible;
+  }
+  &__slider-list {
+    font-size: 0;
+    @include screen-pc {
+      column-gap: 6rem !important;
+    }
+  }
+  &__slider-slide {
+    height: auto;
+    @include screen-pc {
+      width: 32.8rem !important;
+    }
+  }
+  &__slider-slide-link {
+    text-decoration: none;
+  }
+  &__slider-slide-title {
+    text-decoration: underline;
+    @include screen-pc {
+      @include font-size(18, 18);
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__slider-slide-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 332 / 187;
+    background-color: pink;
+    border-radius: 2.4rem;
+    @include screen-pc {
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__slider-slide-desc {
+    @include screen-pc {
+      @include font-size(16, 32);
+    }
+  }
+}

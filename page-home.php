@@ -7,6 +7,7 @@
 ?>
 
 <main class="home page__main">
+
   <div class="main-visual">
     <div class="main-visual__inner page__inner">
       <div class="main-visual__flex page__flex">
@@ -278,7 +279,8 @@
       </div>
     </div>
   </div>
-  <div class="search">
+
+  <div class="search page__search">
     <div class="search__inner page__inner">
       <form method="get" action="<?php echo esc_url(home_url("/")); ?>">
         <div class="search-key">
@@ -565,15 +567,157 @@
           </div>
         </div>
         <!-- radio-search -->
-        <input type="submit" value="Keyword & Area Search">
+        <input class="search__btn page__wte page__en" type="submit" value="Keyword & Area Search">
       </form>
     </div>
   </div>
-  <div class="latest">
-    <div class="latest__inner page__inner">
 
+  <div class="latest page__latest">
+    <div class="latest__inner page__inner">
+      <div class="latest__cnt">
+        <div id="js-latest-slider" class="latest__slider splide">
+          <div class="latest__flex page__flex">
+            <div class="latest__flex1">
+              <p class="latest__flex1Text">
+                先輩たちは、なぜ明治理工を、この学科を選んだのか。<br>
+                そこにはどのような学びがあるのか、インタビューしました。
+              </p>
+            </div>
+            <div class="latest__flex2 page__flex">
+              <a href="#" class="latest__flex2Btn page__en">
+                Archive
+              </a>
+              <div class="latest__flex2Btns splide__arrows page__flex">
+                <p class="latest__flex2Prev splide__arrow splide__arrow--prev page__flex">
+                  ←
+                </p>
+                <p class="latest__flex2Next splide__arrow splide__arrow--next page__flex">
+                  →
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="latest__slider-wrapper splide-wrapper">
+            <div class="latest__slider-track splide__track">
+              <div class="latest__slider-list splide__list page__flex">
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+                <div class="latest__slider-slide splide__slide">
+                  <a href="#" class="latest__slider-slide-link page__black">
+                    <h3 class="latest__slider-slide-title page__bold">
+                      解決できる課題
+                    </h3>
+                    <div class="latest__slider-slide-image"></div>
+                    <p class="latest__slider-slide-desc">
+                      フリーダムの概要と建築・不動産業界における解決すべき課題を紹介しています。当社が取り組むのは、業界全体に根深く残る３点の課題です。
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </main>
 
 <?php get_footer(); ?>
