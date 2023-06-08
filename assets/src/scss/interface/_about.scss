@@ -1,0 +1,65 @@
+@use "../setting/setting" as *;
+
+.about {
+  overflow: hidden;
+  background-color: $wte;
+
+  &__bg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    position: relative;
+
+    &:after {
+      @include center(xy);
+      content: "";
+      display: block;
+      width: 200%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background-color: $bg;
+      border-radius: 50%;
+    }
+    // @include absolute($top: 0, $left: 50%);
+    // @include background-image("about-bg.svg");
+    // margin-left: -100%;
+    // width: 200%;
+    // height: auto;
+    // aspect-ratio: 1 / 1;
+    // animation: 50s linear infinite rotation;
+
+    // @include screen-pc {
+    //   top: 15.2rem;
+    // }
+    // &:after {
+    //   @include center(xy);
+    //   content: "";
+    //   display: block;
+    //   width: 93%;
+    //   height: auto;
+    //   aspect-ratio: 1 / 1;
+    //   background-color: $bg;
+    //   border-radius: 50%;
+    // }
+  }
+  &__bg-text {
+    @include center(xy);
+    width: 200%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  &__inner {
+    position: relative;
+    @include screen-pc {
+      padding: 15.2rem 2rem;
+    }
+  }
+  &__cards {
+    background-color: red;
+    @include screen-pc {
+      width: 44rem;
+      height: 31.4rem;
+      margin: 0 auto;
+    }
+  }
+}

@@ -718,6 +718,30 @@
     </div>
   </div>
 
+  <div class="about page__about">
+    <div class="about__bg">
+      <div class="about__bg-text">
+        <img class="js-inview-load" width="" height="" data-src="<?php echo get_template_directory_uri(); ?>/assets/dist/img/about-bg.svg" alt="Gourmet media by a man who was fascinated by the hokkaido and moved there." />
+      </div>
+    </div>
+    <div class="about__inner">
+      <div class="about__cards"></div>
+      <p class="about__desc page__bold">
+        HITOTOKIは<br>
+        ホテルで過ごす時間を<br>
+        より充実した“ひととき“にするための<br>
+        理想の過ごし方を提案する<br>
+        ホテル紹介サービスです。
+      </p>
+      <p class="about__allert">
+        ※サイト内の写真・テキストは全て掲載許可をいただいています
+      </p>
+      <p class="about__btn page__en">
+        Read more
+      </p>
+    </div>
+  </div>
+
 </main>
 
 <?php get_footer(); ?>

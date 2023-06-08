@@ -61,7 +61,8 @@ body {
   &__inner,
   &__flex,
   &__search,
-  &__latest {
+  &__latest,
+  &__about {
     @extend .page;
   }
   &__inner {
